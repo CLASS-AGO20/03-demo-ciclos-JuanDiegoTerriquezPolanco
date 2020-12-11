@@ -38,16 +38,26 @@ export default class App {
         return aux;
     }
     sumarParesDo(){
-        do {
         let i=0,aux=0;
-        while (i<=20) {
+        do {
             if(i%2==0){
                 aux=aux+i;
             }
             i++;
-        }
+        
+        } while (i<=20);
         return aux;
-        } while (i<=20);    
+    }
+    contarImparesDo(inicio, fin){
+        let i=inicio,aux=0;
+        do {
+            if (i%2==0) {
+                aux++;
+            }
+            i++;
+            
+        } while (i<=fin);
+        return aux;
     }
 }
 
@@ -57,3 +67,4 @@ console.log(app.contarImparesFor(10,30));
 console.log(app.sumarParesWhile());
 console.log(app.contarImparesWhile(10,30));
 console.log(app.sumarParesDo());
+console.log(app.contarImparesDo(10,30));
