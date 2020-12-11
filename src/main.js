@@ -13,7 +13,17 @@ export default class App {
         for (let i = inicio; i <= fin; i++) {
             if (i%2==0) {
                 aux++;
-            }    
+            }
+        }
+        return aux;
+    }
+    sumarParesWhile(){
+        let i=0,aux=0;
+        while (i<=20) {
+            if(i%2==0){
+                aux=aux+i;
+            }
+            i++;
         }
         return aux;
     }
@@ -22,3 +32,4 @@ export default class App {
 let app = new App();
 console.log(app.sumarParesFor());
 console.log(app.contarImparesFor(10,30));
+console.log(app.sumarParesWhile());
